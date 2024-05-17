@@ -7,12 +7,110 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="compass-container">
-      <div class="compass-top">
-        <div class="compass-heading-output">NaN</div>
-        <div class="compass-pointer"></div>
+    <div class="top">
+      <div class="top-left top-side">
+        <div class="class-lvl-top">
+          <p id="nickname">Nickname</p>
+          <hr />
+        </div>
+        <div class="class-lvl-below">
+          <div class="lvl-bar-top">
+            <div class="class-name">Żołnierz</div>
+            <div class="money">
+              <span class="dolar">$</span><span class="money-input">0</span>
+            </div>
+          </div>
+          <div class="lvl-bar-wrapper">
+            <div class="lvl-bar-bg"></div>
+            <div class="lvl-bar"></div>
+          </div>
+          <div class="lvl-bar-below">
+            <div class="lvl">Poziom <span class="lvl-input">21</span></div>
+            <div class="exp-input">
+              <span class="now-exp">342</span>/<span class="max-exp">550</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="compass"></div>
+      <div class="top-center">
+        <div class="compass-container">
+          <div class="compass-top">
+            <div class="compass-heading-output">NaN</div>
+            <div class="compass-pointer"></div>
+          </div>
+          <div class="compass"></div>
+        </div>
+      </div>
+      <div class="top-right top-side">
+        <div class="team-container">
+          <div class="team-top">
+            <div class="team-bar-percent" id="germany-percent-val">25%</div>
+            <div class="team-name" id="germany-name">Niemcy</div>
+            <div class="team-players-in-zone" id="germany-players-in-zone">
+              <span id="germany-in-zone">3</span>/<span id="germany-not-in-zone"
+                >20</span
+              >
+            </div>
+          </div>
+          <div class="team-bottom">
+            <div class="team-bar-wrapper">
+              <div class="team-bar-bg" id="germany-bar-bg"></div>
+              <div class="team-bar p25" id="germany-bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="team-container">
+          <div class="team-top">
+            <div class="team-bar-percent" id="russia-percent-val">50%</div>
+            <div class="team-name" id="russia-name">Rosja</div>
+            <div class="team-players-in-zone" id="russia-players-in-zone">
+              <span id="russia-in-zone">3</span>/<span id="russia-not-in-zone"
+                >20</span
+              >
+            </div>
+          </div>
+          <div class="team-bottom">
+            <div class="team-bar-wrapper">
+              <div class="team-bar-bg" id="russia-bar-bg"></div>
+              <div class="team-bar p50" id="russia-bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="team-container">
+          <div class="team-top">
+            <div class="team-bar-percent" id="poland-percent-val">75%</div>
+            <div class="team-name" id="poland-name">Polska</div>
+            <div class="team-players-in-zone" id="poland-players-in-zone">
+              <span id="poland-in-zone">3</span>/<span id="poland-not-in-zone"
+                >20</span
+              >
+            </div>
+          </div>
+          <div class="team-bottom">
+            <div class="team-bar-wrapper">
+              <div class="team-bar-bg" id="poland-bar-bg"></div>
+              <div class="team-bar p75" id="poland-bar"></div>
+            </div>
+          </div>
+        </div>
+        <div class="team-container">
+          <div class="team-top">
+            <div class="team-bar-percent" id="france-percent-val">100%</div>
+            <div class="team-name" id="france-name">Francja</div>
+            <div class="team-players-in-zone" id="france-players-in-zone">
+              <span id="france-in-zone">3</span>/<span id="france-not-in-zone"
+                >20</span
+              >
+            </div>
+          </div>
+          <div class="team-bottom">
+            <div class="team-bar-wrapper">
+              <div class="team-bar-bg" id="france-bar-bg"></div>
+              <div class="team-bar p100" id="france-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="app.js"></script>

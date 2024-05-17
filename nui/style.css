@@ -1,4 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Freeman&family=Lalezar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Lilita+One&display=swap");
+
+:root {
+  --primary-color: #161616;
+  --secondary-color: #1f1f1f;
+  --third-color: #2d2d2d;
+  --selection-color: #525252;
+  --hr-color: #4f4f4f;
+  --accent-color: #24ff00;
+  --main-font: "Lalezar";
+}
 
 * {
   margin: 0;
@@ -8,10 +19,19 @@
 
 body {
   overflow: hidden;
-  display: flex;
   width: 100vw;
   height: 100vh;
-  justify-content: center;
+  display: grid;
+  grid-template: "top top top", "mid mid mid", "bot bot bot";
+}
+
+.top {
+  grid-area: "top";
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .compass-container {
@@ -57,11 +77,201 @@ body {
   overflow: hidden;
 }
 
-.line {
-  width: 3px;
-  height: 50px;
-  background-color: rgb(255, 0, 0);
+.top-side {
+  margin: 15px;
+  width: 420px;
+  height: 160px;
+  background-color: #1a1a1a;
+  box-shadow: 0 0 10px 0 #111111;
+  /* border: 1px solid #ad00ff; */
+  border-radius: 20px;
+
+  transition: 1s ease-in-out;
+}
+
+.top-left {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nickname {
+  color: #ffffff;
+  text-shadow: 0px 0px 5px #ffffff;
+
+  font-family: var(--main-font);
+  font-size: 38px;
+  line-height: 1;
+}
+
+hr {
+  width: 75px;
+  border: none;
+  border-top: 1px solid #4f4f4f;
+}
+
+.class-lvl-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.class-lvl-below {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #ffffff;
+  text-shadow: 0px 0px 2px #ffffff;
+  font-family: var(--main-font);
+  z-index: 9999;
+}
+.money {
+  display: block;
+  text-shadow: 0px 0px 3px #ffffff;
+  z-index: 9999;
+}
+
+.class-name {
+  display: block;
+  text-shadow: 0px 0px 3px #ffffff;
+  z-index: 9999;
+}
+
+.dolar {
+  color: #04ff00;
+  text-shadow: 0px 0px 5px #04ff00;
+  z-index: 9999;
+}
+
+.lvl-bar-top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0.8;
+}
+
+.lvl-bar-wrapper {
+  width: 385px;
+  position: relative;
+}
+
+.lvl-bar-bg {
+  border: 1px solid #4f4f4f;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.lvl-bar {
+  border: 1px solid #ad00ff;
+  box-shadow: 0 0 5px 1px #ad00ff;
+  height: 1px;
+  position: absolute;
+  top: 0;
+}
+
+.lvl-bar-below {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+}
+
+.top-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.team-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 385px;
+  font-family: var(--main-font);
+  color: #fff;
+  text-shadow: 0px 0px 1px #ffffff;
+}
+
+.team-top {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  width: 100%;
+}
+
+.team-name {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.team-bottom {
+  width: 385px;
+}
+
+.team-bar-wrapper {
+  width: 385px;
+  position: relative;
+}
+
+.team-bar-bg {
+  border: 1px solid #4f4f4f;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.team-bar {
+  border: 1px solid #ad00ff;
+  box-shadow: 0 0 5px 1px #ad00ff;
+  height: 1px;
+  position: absolute;
+  top: 0;
+}
+
+.p25 {
+  border: 1px solid #ff3333;
+  box-shadow: 0 0 5px 1px #ff3333;
+  width: 25%;
+}
+
+.p50 {
+  border: 1px solid #ff9900;
+  box-shadow: 0 0 5px 1px #ff9900;
+  width: 50%;
+}
+
+.p75 {
+  border: 1px solid #fff500;
+  box-shadow: 0 0 5px 1px #fff500;
+  width: 75%;
+}
+
+.p100 {
+  border: 1px solid #00d823;
+  box-shadow: 0 0 5px 1px #00d823;
+  width: 100%;
+}
+
+.top-side-hidden {
+  transform: translateY(-100vh);
 }
