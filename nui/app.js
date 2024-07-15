@@ -9,22 +9,13 @@ window.addEventListener("message", (e) => {
   if (data.type === "updateHeading") {
     heading = data.heading;
     updateRot();
-    // console.log(`calc(${heading * -1 * 10 - 2700}px - 50px) 0`);
   }
 
   if (data.type === "toggle-open") {
     topSides.forEach((topSide) => {
       topSide.classList.toggle("top-side-hidden");
     });
-    // console.log(`calc(${heading * -1 * 10 - 2700}px - 50px) 0`);
   }
-});
-
-document.body.addEventListener("click", (e) => {
-  console.log("chuj");
-  // if (e.button == 1) {
-  //   console.log("chuj");
-  // }
 });
 
 function updateRot() {
@@ -35,12 +26,3 @@ function updateRot() {
     compassHeading.innerHTML = Math.floor(heading);
   }
 }
-
-// updateRot();
-// compass.style.backgroundPosition = `calc(${
-//   (360 - heading) * -1 * 5
-// }px - 25px) 0`;
-// compassHeading.innerHTML = Math.floor(heading);
-
-// updateRot(180);
-// setInterval(test, 1000);
